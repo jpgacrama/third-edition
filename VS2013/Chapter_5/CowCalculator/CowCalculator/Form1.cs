@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CowCalculator
 {
     public partial class Form1 : Form
     {
-        Farmer farmer;
+        private Farmer farmer;
 
         public Form1()
         {
