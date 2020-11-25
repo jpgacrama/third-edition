@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DinnerParty_fixed_
+﻿namespace DinnerParty_fixed_
 {
-    class DinnerParty
+    internal class DinnerParty
     {
         public const int CostOfFoodPerPerson = 25;
 
