@@ -11,32 +11,32 @@ namespace DinnerParty_first_version
         {
             InitializeComponent();
             dinnerParty = new DinnerParty() { NumberOfPeople = 5 };
-            dinnerParty.CalculateCostOfDecorations(fancyBox.Checked);
-            dinnerParty.SetHealthyOption(healthyBox.Checked);
+            dinnerParty.CalculateCostOfDecorations(FancyDecorationsCheckbox.Checked);
+            dinnerParty.SetHealthyOption(HealthyOptionCheckbox.Checked);
             DisplayDinnerPartyCost();
         }
 
-        private void fancyBox_CheckedChanged(object sender, EventArgs e)
+        private void FancyDecorationsCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.CalculateCostOfDecorations(fancyBox.Checked);
+            dinnerParty.CalculateCostOfDecorations(FancyDecorationsCheckbox.Checked);
             DisplayDinnerPartyCost();
         }
 
-        private void healthyBox_CheckedChanged(object sender, EventArgs e)
+        private void HealthyOptionCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.SetHealthyOption(healthyBox.Checked);
+            dinnerParty.SetHealthyOption(HealthyOptionCheckbox.Checked);
             DisplayDinnerPartyCost();
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void NumberOfPeopleListBox_ValueChanged(object sender, EventArgs e)
         {
-            dinnerParty.NumberOfPeople = (int)numericUpDown1.Value;
+            dinnerParty.NumberOfPeople = (int)NumberOfPeopleListBox.Value;
             DisplayDinnerPartyCost();
         }
 
         private void DisplayDinnerPartyCost()
         {
-            decimal Cost = dinnerParty.CalculateCost(healthyBox.Checked);
+            decimal Cost = dinnerParty.CalculateCost(HealthyOptionCheckbox.Checked);
             costLabel.Text = Cost.ToString("c");
         }
     }
