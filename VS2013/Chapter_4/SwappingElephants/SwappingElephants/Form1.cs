@@ -13,6 +13,8 @@ namespace SwappingElephants
             InitializeComponent();
             lucinda = new Elephant() { Name = "Lucinda", EarSize = 33 };
             lloyd = new Elephant() { Name = "Lloyd", EarSize = 40 };
+            lloyd.TellMe("Hi", lucinda);
+            lucinda.SpeakTo(lloyd, "Hello");
         }
 
         private void LloydButton_Click(object sender, EventArgs e)
