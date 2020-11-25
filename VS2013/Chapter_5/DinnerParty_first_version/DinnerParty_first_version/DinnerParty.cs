@@ -3,17 +3,21 @@
     internal class DinnerParty
     {
         private const int CostOfFoodPerPerson = 25;
-        private int NumberOfPeople;
+        private int numberOfPeople;
         private decimal CostOfBeveragesPerPerson;
         private decimal CostOfDecorations = 0;
 
         // Constructor
-        public DinnerParty(int numPeople) { NumberOfPeople = numPeople; }
+        public DinnerParty(int numPeople) { numberOfPeople = numPeople; }
 
-        // Access Modifier
         public void SetNumberOfPeople(int numPeople)
         {
-            NumberOfPeople = numPeople;
+            numberOfPeople = numPeople;
+        }
+
+        public int GetNumberOfPeople()
+        {
+            return numberOfPeople;
         }
 
         public void SetHealthyOption(bool healthyOption)
@@ -32,11 +36,11 @@
         {
             if (fancy)
             {
-                CostOfDecorations = (NumberOfPeople * 15.00M) + 50M;
+                CostOfDecorations = (numberOfPeople * 15.00M) + 50M;
             }
             else
             {
-                CostOfDecorations = (NumberOfPeople * 7.50M) + 30M;
+                CostOfDecorations = (numberOfPeople * 7.50M) + 30M;
             }
         }
 
@@ -44,7 +48,7 @@
         {
             decimal totalCost = CostOfDecorations +
                    ((CostOfBeveragesPerPerson + CostOfFoodPerPerson)
-                       * NumberOfPeople);
+                       * numberOfPeople);
 
             if (healthyOption)
             {
