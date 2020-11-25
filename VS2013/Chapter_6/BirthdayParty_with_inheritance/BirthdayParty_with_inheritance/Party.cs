@@ -8,6 +8,9 @@
 
         public bool FancyDecorations { get; set; }
 
+        // This is the max threshold before charging an extra $100
+        private const int UPPER_LIMIT_PEOPLE = 12;
+
         private decimal CalculateCostOfDecorations()
         {
             decimal costOfDecorations;
@@ -25,7 +28,7 @@
                 decimal totalCost = CalculateCostOfDecorations();
                 totalCost += CostOfFoodPerPerson * NumberOfPeople;
 
-                if (NumberOfPeople > 12)
+                if (NumberOfPeople > UPPER_LIMIT_PEOPLE)
                     totalCost += 100;
 
                 return totalCost;
