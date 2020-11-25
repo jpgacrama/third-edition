@@ -2,8 +2,13 @@
 {
     internal class BirthdayParty : Party
     {
+        private const int DEFAULT_CAKE_SIZE = 8;
+        private const int LARGE_CAKE_SIZE = 16;
+        private const decimal MAX_WRITING_LENGTH = 40;
+
         public BirthdayParty(int numberOfPeople,
-                                bool fancyDecorations, string cakeWriting)
+                             bool fancyDecorations,
+                             string cakeWriting)
         {
             NumberOfPeople = numberOfPeople;
             FancyDecorations = fancyDecorations;
@@ -26,17 +31,18 @@
         private int CakeSize()
         {
             if (NumberOfPeople <= 4)
-                return 8;
+                return DEFAULT_CAKE_SIZE;
             else
-                return 16;
+                return LARGE_CAKE_SIZE;
         }
 
         private int MaxWritingLength()
         {
-            if (CakeSize() == 8)
-                return 16;
+            if (CakeSize() == DEFAULT_CAKE_SIZE)
+                return LARGE_CAKE_SIZE;
             else
-                return 40;
+                // possible modulo effect since MAX_WRITING_LENGTH is decimal
+                return (int)MAX_WRITING_LENGTH;
         }
 
         public bool CakeWritingTooLong
@@ -56,8 +62,8 @@
             {
                 decimal totalCost = base.Cost;
                 decimal cakeCost;
-                if (CakeSize() == 8)
-                    cakeCost = 40M + ActualLength * .25M;
+                if (CakeSize() == DEFAULT_CAKE_SIZE)
+                    cakeCost = MAX_WRITING_LENGTH + ActualLength * .25M;
                 else
                     cakeCost = 75M + ActualLength * .25M;
                 return totalCost + cakeCost;
