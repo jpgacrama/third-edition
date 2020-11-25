@@ -4,13 +4,20 @@
     {
         private int feedMultiplier;
 
-        public int FeedMultiplier { get { return feedMultiplier; } }
+        public int FeedMultiplier
+        {
+            get { return feedMultiplier; }
+            private set
+            {
+                feedMultiplier = value;
+            }
+        }
 
         public int BagsOfFeed { get; private set; }
 
         public Farmer(int numberOfCows, int feedMultiplier)
         {
-            this.feedMultiplier = feedMultiplier;
+            FeedMultiplier = feedMultiplier;
             NumberOfCows = numberOfCows;
         }
 
