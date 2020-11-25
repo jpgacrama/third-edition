@@ -30,7 +30,7 @@ namespace DinnerParty_first_version
 
         private void NumberOfPeopleListBox_ValueChanged(object sender, EventArgs e)
         {
-            dinnerParty.NumberOfPeople = (int)NumberOfPeopleListBox.Value;
+            dinnerParty.SetNumberOfPeople((int)NumberOfPeopleListBox.Value);
             DisplayDinnerPartyCost();
         }
 

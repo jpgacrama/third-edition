@@ -4,8 +4,8 @@
     {
         private const int CostOfFoodPerPerson = 25;
         private int NumberOfPeople;
-        public decimal CostOfBeveragesPerPerson;
-        public decimal CostOfDecorations = 0;
+        private decimal CostOfBeveragesPerPerson;
+        private decimal CostOfDecorations = 0;
 
         // I will create a Constructor to avoid exposing members of the Class
         public DinnerParty(int numPeople) { NumberOfPeople = numPeople; }
