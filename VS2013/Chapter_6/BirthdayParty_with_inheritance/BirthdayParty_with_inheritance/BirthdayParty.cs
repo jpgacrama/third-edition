@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BirthdayParty_with_inheritance
+﻿namespace BirthdayParty_with_inheritance
 {
-    class BirthdayParty : Party
+    internal class BirthdayParty : Party
     {
         public BirthdayParty(int numberOfPeople,
                                 bool fancyDecorations, string cakeWriting)
@@ -26,7 +20,6 @@ namespace BirthdayParty_with_inheritance
                     return MaxWritingLength();
                 else
                     return CakeWriting.Length;
-
             }
         }
 
@@ -45,7 +38,6 @@ namespace BirthdayParty_with_inheritance
             else
                 return 40;
         }
-
 
         public bool CakeWritingTooLong
         {
