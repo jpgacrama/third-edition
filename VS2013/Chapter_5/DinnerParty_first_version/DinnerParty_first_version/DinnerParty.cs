@@ -2,10 +2,19 @@
 {
     internal class DinnerParty
     {
-        public const int CostOfFoodPerPerson = 25;
-        public int NumberOfPeople;
+        private const int CostOfFoodPerPerson = 25;
+        private int NumberOfPeople;
         public decimal CostOfBeveragesPerPerson;
         public decimal CostOfDecorations = 0;
+
+        // I will create a Constructor to avoid exposing members of the Class
+        public DinnerParty(int numPeople) { NumberOfPeople = numPeople; }
+
+        // Access Modifier
+        public void SetNumberOfPeople(int numPeople)
+        {
+            NumberOfPeople = numPeople;
+        }
 
         public void SetHealthyOption(bool healthyOption)
         {

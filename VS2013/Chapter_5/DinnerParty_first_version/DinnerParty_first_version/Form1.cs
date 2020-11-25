@@ -10,7 +10,7 @@ namespace DinnerParty_first_version
         public Form1()
         {
             InitializeComponent();
-            dinnerParty = new DinnerParty() { NumberOfPeople = 5 };
+            dinnerParty = new DinnerParty(5);
             dinnerParty.CalculateCostOfDecorations(FancyDecorationsCheckbox.Checked);
             dinnerParty.SetHealthyOption(HealthyOptionCheckbox.Checked);
             DisplayDinnerPartyCost();
