@@ -7,7 +7,7 @@
         private decimal CostOfBeveragesPerPerson;
         private decimal CostOfDecorations = 0;
 
-        // I will create a Constructor to avoid exposing members of the Class
+        // Constructor
         public DinnerParty(int numPeople) { NumberOfPeople = numPeople; }
 
         // Access Modifier
