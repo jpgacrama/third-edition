@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BirthdayParty_first_version
+﻿namespace BirthdayParty_first_version
 {
-    class BirthdayParty
+    internal class BirthdayParty
     {
         public const int CostOfFoodPerPerson = 25;
 
@@ -50,6 +44,7 @@ namespace BirthdayParty_first_version
             else
                 return 40;
         }
+
         public bool CakeWritingTooLong
         {
             get
