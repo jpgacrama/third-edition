@@ -3,6 +3,7 @@
     internal class Farmer
     {
         private int feedMultiplier;
+
         public int FeedMultiplier { get { return feedMultiplier; } }
 
         public int BagsOfFeed { get; private set; }
