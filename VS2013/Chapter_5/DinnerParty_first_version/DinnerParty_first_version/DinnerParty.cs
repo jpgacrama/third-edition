@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DinnerParty_first_version
+﻿namespace DinnerParty_first_version
 {
-    class DinnerParty
+    internal class DinnerParty
     {
         public const int CostOfFoodPerPerson = 25;
         public int NumberOfPeople;
@@ -36,6 +30,7 @@ namespace DinnerParty_first_version
                 CostOfDecorations = (NumberOfPeople * 7.50M) + 30M;
             }
         }
+
         public decimal CalculateCost(bool healthyOption)
         {
             decimal totalCost = CostOfDecorations +
