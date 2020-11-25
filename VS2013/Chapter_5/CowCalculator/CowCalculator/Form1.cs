@@ -20,8 +20,8 @@ namespace CowCalculator
 
         private void calculate_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("I need {0} bags of feed for {1} cows",
-                farmer.BagsOfFeed, farmer.NumberOfCows);
+            Console.WriteLine("I need " + farmer.BagsOfFeed + " bags of feed for "
+                + farmer.NumberOfCows + " cows");
         }
     }
 }
