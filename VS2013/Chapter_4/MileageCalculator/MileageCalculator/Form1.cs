@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MileageCalculator
 {
     public partial class Form1 : Form
     {
-        int startingMileage;
-        int endingMileage;
-        double milesTraveled;
-        double reimburseRate = .39;
-        double amountOwed;
+        private int startingMileage;
+        private int endingMileage;
+        private double milesTraveled;
+        private double reimburseRate = .39;
+        private double amountOwed;
+
         public Form1()
         {
             InitializeComponent();
@@ -29,14 +23,14 @@ namespace MileageCalculator
             if (startingMileage < endingMileage)
             {
                 milesTraveled = endingMileage - startingMileage;
-                amountOwed = milesTraveled * reimburseRate; 
+                amountOwed = milesTraveled * reimburseRate;
                 label4.Text = "$" + amountOwed;
             }
             else
             {
                 MessageBox.Show(
-            "The starting mileage must be less than the ending mileage",
-                                "Cannot Calculate Mileage");
+                    "The starting mileage must be less than the ending mileage",
+                    "Cannot Calculate Mileage");
             }
         }
 
