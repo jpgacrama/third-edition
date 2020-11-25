@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CowCalculator
+﻿namespace CowCalculator
 {
-    class Farmer
+    internal class Farmer
     {
         private int feedMultiplier;
         public int FeedMultiplier { get { return feedMultiplier; } }
@@ -17,9 +11,10 @@ namespace CowCalculator
         {
             this.feedMultiplier = feedMultiplier;
             NumberOfCows = numberOfCows;
-        } 
+        }
 
         private int numberOfCows;
+
         public int NumberOfCows
         {
             get
