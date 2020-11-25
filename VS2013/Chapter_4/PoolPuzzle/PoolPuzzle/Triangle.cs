@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PoolPuzzle
+﻿namespace PoolPuzzle
 {
     using System.Windows.Forms;
 
-    class Triangle
+    internal class Triangle
     {
-        double area;
-        int height;
-        int length;
+        private double area;
+        private int height;
+        private int length;
+
         public static void Main(string[] args)
         {
             string results = "";
@@ -36,7 +31,8 @@ namespace PoolPuzzle
             MessageBox.Show(results +
                ", t5 area = " + t5.area);
         }
-        void setArea()
+
+        private void setArea()
         {
             area = (height * length) / 2;
         }
