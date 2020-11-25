@@ -16,7 +16,7 @@ namespace MileageCalculator
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CalculateButton_Click(object sender, EventArgs e)
         {
             startingMileage = (int)numericUpDown1.Value;
             endingMileage = (int)numericUpDown2.Value;
@@ -34,7 +34,7 @@ namespace MileageCalculator
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void DisplayMilesButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(milesTraveled + " miles", "Miles Traveled");
         }
