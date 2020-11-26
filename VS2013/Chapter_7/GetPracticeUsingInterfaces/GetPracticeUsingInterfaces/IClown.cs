@@ -1,6 +1,6 @@
 ﻿namespace GetPracticeUsingInterfaces
 {
-    internal interface IClown
+    public interface IClown
     {
         string FunnyThingIHave { get; }
 

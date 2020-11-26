@@ -2,7 +2,7 @@
 
 namespace GetPracticeUsingInterfaces
 {
-    internal class TallGuy : IClown
+    public class TallGuy : IClown
     {
         public string Name;
         public int Height;
