@@ -45,14 +45,16 @@ namespace BeehiveManagementSystem
         {
             if (!String.IsNullOrEmpty(currentJob))
                 return false;
-            for (int i = 0; i < jobsICanDo.Length; i++)
-                if (jobsICanDo[i] == job)
+            foreach (var item in jobsICanDo)
+            {
+                if (item == job)
                 {
                     currentJob = job;
                     this.shiftsToWork = numberOfShifts;
                     shiftsWorked = 0;
                     return true;
                 }
+            }
             return false;
         }
 
