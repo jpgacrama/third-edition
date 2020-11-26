@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BirthdayParty_with_inheritance
+﻿namespace BirthdayParty_with_inheritance
 {
-    class Party
+    internal class Party
     {
         public const int CostOfFoodPerPerson = 25;
 
         public int NumberOfPeople { get; set; }
 
         public bool FancyDecorations { get; set; }
+
+        // This is the max threshold before charging an extra $100
+        private const int UPPER_LIMIT_PEOPLE = 12;
 
         private decimal CalculateCostOfDecorations()
         {
@@ -31,7 +28,7 @@ namespace BirthdayParty_with_inheritance
                 decimal totalCost = CalculateCostOfDecorations();
                 totalCost += CostOfFoodPerPerson * NumberOfPeople;
 
-                if (NumberOfPeople > 12)
+                if (NumberOfPeople > UPPER_LIMIT_PEOPLE)
                     totalCost += 100;
 
                 return totalCost;

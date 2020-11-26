@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BeehiveManagementSystem
 {
-    class Worker : Bee
+    public class Worker : Bee
     {
         public Worker(string[] jobsICanDo, double weightMg)
             : base(weightMg)
@@ -14,14 +10,7 @@ namespace BeehiveManagementSystem
             this.jobsICanDo = jobsICanDo;
         }
 
-        const double honeyUnitsPerShiftWorked = .65;
-
-        public override double HoneyConsumptionRate()
-        {
-            double consumption = base.HoneyConsumptionRate();
-            consumption += shiftsWorked * honeyUnitsPerShiftWorked;
-            return consumption;
-        }
+        private const double honeyUnitsPerShiftWorked = .65;
 
         public int ShiftsLeft
         {
@@ -32,6 +21,7 @@ namespace BeehiveManagementSystem
         }
 
         private string currentJob = "";
+
         public string CurrentJob
         {
             get
@@ -48,14 +38,16 @@ namespace BeehiveManagementSystem
         {
             if (!String.IsNullOrEmpty(currentJob))
                 return false;
-            for (int i = 0; i < jobsICanDo.Length; i++)
-                if (jobsICanDo[i] == job)
+            foreach (var item in jobsICanDo)
+            {
+                if (item == job)
                 {
                     currentJob = job;
                     this.shiftsToWork = numberOfShifts;
                     shiftsWorked = 0;
                     return true;
                 }
+            }
             return false;
         }
 
@@ -73,6 +65,13 @@ namespace BeehiveManagementSystem
             }
             else
                 return false;
+        }
+
+        public override double HoneyConsumptionRate()
+        {
+            double consumption = base.HoneyConsumptionRate();
+            consumption += shiftsWorked * honeyUnitsPerShiftWorked;
+            return consumption;
         }
     }
 }

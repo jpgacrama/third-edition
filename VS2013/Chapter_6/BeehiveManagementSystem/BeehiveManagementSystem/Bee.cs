@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BeehiveManagementSystem
+﻿namespace BeehiveManagementSystem
 {
-    class Bee
+    public class Bee
     {
         public const double HoneyUnitsConsumedPerMg = .25;
 

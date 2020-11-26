@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BirthdayParty_first_version
 {
     public partial class Form1 : Form
     {
-        DinnerParty dinnerParty;
-        BirthdayParty birthdayParty;
+        private DinnerParty dinnerParty;
+        private BirthdayParty birthdayParty;
+
         public Form1()
         {
             InitializeComponent();
@@ -67,7 +61,6 @@ namespace BirthdayParty_first_version
             birthdayParty.CakeWriting = cakeWriting.Text;
             DisplayBirthdayPartyCost();
         }
-
 
         private void DisplayBirthdayPartyCost()
         {

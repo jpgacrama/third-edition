@@ -46,11 +46,11 @@
   <ItemGroup>
     <Compile Include="BirthdayParty.cs" />
     <Compile Include="DinnerParty.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="PartyPlanner2.0.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PartyPlanner2.0.Designer.cs">
+      <DependentUpon>PartyPlanner2.0.cs</DependentUpon>
     </Compile>
     <Compile Include="Party.cs" />
     <Compile Include="Program.cs" />

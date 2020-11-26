@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BirthdayParty_with_inheritance
+﻿namespace BirthdayParty_with_inheritance
 {
-    class DinnerParty : Party
+    internal class DinnerParty : Party
     {
         public bool HealthyOption { get; set; }
 
