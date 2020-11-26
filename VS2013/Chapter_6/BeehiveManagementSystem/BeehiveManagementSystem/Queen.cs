@@ -15,8 +15,8 @@ namespace BeehiveManagementSystem
 
         public bool AssignWork(string job, int numberOfShifts)
         {
-            for (int i = 0; i < workers.Length; i++)
-                if (workers[i].DoThisJob(job, numberOfShifts))
+            foreach (var item in workers)
+                if (item.DoThisJob(job, numberOfShifts))
                     return true;
             return false;
         }
