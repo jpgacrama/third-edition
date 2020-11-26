@@ -287,3 +287,5 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 *.resx
+
+VS2013/Chapter_6/BeehiveManagementSystem/Doxygen/html/

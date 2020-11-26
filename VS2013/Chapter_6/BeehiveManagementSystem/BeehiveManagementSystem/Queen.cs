@@ -2,7 +2,7 @@
 
 namespace BeehiveManagementSystem
 {
-    internal class Queen : Bee
+    public class Queen : Bee
     {
         public Queen(Worker[] workers, double weightMg)
             : base(weightMg)

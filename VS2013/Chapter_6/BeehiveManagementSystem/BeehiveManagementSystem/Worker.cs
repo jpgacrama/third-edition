@@ -2,7 +2,7 @@
 
 namespace BeehiveManagementSystem
 {
-    internal class Worker : Bee
+    public class Worker : Bee
     {
         public Worker(string[] jobsICanDo, double weightMg)
             : base(weightMg)

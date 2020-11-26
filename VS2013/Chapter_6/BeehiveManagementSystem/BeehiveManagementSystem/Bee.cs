@@ -1,6 +1,6 @@
 ﻿namespace BeehiveManagementSystem
 {
-    internal class Bee
+    public class Bee
     {
         public const double HoneyUnitsConsumedPerMg = .25;
 
