@@ -12,13 +12,6 @@ namespace BeehiveManagementSystem
 
         private const double honeyUnitsPerShiftWorked = .65;
 
-        public override double HoneyConsumptionRate()
-        {
-            double consumption = base.HoneyConsumptionRate();
-            consumption += shiftsWorked * honeyUnitsPerShiftWorked;
-            return consumption;
-        }
-
         public int ShiftsLeft
         {
             get
@@ -72,6 +65,13 @@ namespace BeehiveManagementSystem
             }
             else
                 return false;
+        }
+
+        public override double HoneyConsumptionRate()
+        {
+            double consumption = base.HoneyConsumptionRate();
+            consumption += shiftsWorked * honeyUnitsPerShiftWorked;
+            return consumption;
         }
     }
 }
