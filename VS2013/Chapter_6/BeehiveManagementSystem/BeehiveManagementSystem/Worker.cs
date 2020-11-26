@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BeehiveManagementSystem
 {
-    class Worker : Bee
+    internal class Worker : Bee
     {
         public Worker(string[] jobsICanDo, double weightMg)
             : base(weightMg)
@@ -14,7 +10,7 @@ namespace BeehiveManagementSystem
             this.jobsICanDo = jobsICanDo;
         }
 
-        const double honeyUnitsPerShiftWorked = .65;
+        private const double honeyUnitsPerShiftWorked = .65;
 
         public override double HoneyConsumptionRate()
         {
@@ -32,6 +28,7 @@ namespace BeehiveManagementSystem
         }
 
         private string currentJob = "";
+
         public string CurrentJob
         {
             get
