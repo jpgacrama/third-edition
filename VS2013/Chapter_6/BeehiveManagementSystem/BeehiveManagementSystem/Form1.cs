@@ -5,6 +5,8 @@ namespace BeehiveManagementSystem
 {
     public partial class Form1 : Form
     {
+        private const int QUEEN_BEE_WEIGHT = 275;
+
         public Form1()
         {
             InitializeComponent();
@@ -15,7 +17,7 @@ namespace BeehiveManagementSystem
             workers[2] = new Worker(new string[] { "Hive maintenance", "Sting patrol" }, 149);
             workers[3] = new Worker(new string[] { "Nectar collector", "Honey manufacturing",
                                                    "Egg care", "Baby bee tutoring", "Hive maintenance", "Sting patrol" }, 155);
-            queen = new Queen(workers, 275);
+            queen = new Queen(workers, QUEEN_BEE_WEIGHT);
         }
 
         private Queen queen;
