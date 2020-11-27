@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TwoDecks
 {
     public partial class Form1 : Form
     {
-
-        Deck deck1;
-        Deck deck2;
-        Random random = new Random();
+        private Deck deck1;
+        private Deck deck2;
+        private Random random = new Random();
 
         public Form1()
         {
@@ -103,6 +95,4 @@ namespace TwoDecks
             RedrawDeck(2);
         }
     }
-
-
 }
