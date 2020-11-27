@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoFish
 {
     using System.Windows.Forms;
 
-    class Player
+    internal class Player
     {
         private string name;
         public string Name { get { return name; } }
@@ -96,10 +93,27 @@ namespace GoFish
                 cards.Add(stock.Deal());
             }
         }
+
         public int CardCount { get { return cards.Count; } }
-        public void TakeCard(Card card) { cards.Add(card); }
-        public IEnumerable<string> GetCardNames() { return cards.GetCardNames(); }
-        public Card Peek(int cardNumber) { return cards.Peek(cardNumber); }
-        public void SortHand() { cards.SortByValue(); }
+
+        public void TakeCard(Card card)
+        {
+            cards.Add(card);
+        }
+
+        public IEnumerable<string> GetCardNames()
+        {
+            return cards.GetCardNames();
+        }
+
+        public Card Peek(int cardNumber)
+        {
+            return cards.Peek(cardNumber);
+        }
+
+        public void SortHand()
+        {
+            cards.SortByValue();
+        }
     }
 }
