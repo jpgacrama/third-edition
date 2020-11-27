@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LetsCreateAListOfDucks
 {
-    class DuckComparerByKind : IComparer<Duck>
+    public class DuckComparerByKind : IComparer<Duck>
     {
         public int Compare(Duck x, Duck y)
         {

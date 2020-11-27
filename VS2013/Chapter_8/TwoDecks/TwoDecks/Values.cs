@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TwoDecks
+﻿namespace TwoDecks
 {
-    enum Values
+    internal enum Values
     {
         Ace = 1,
         Two = 2,

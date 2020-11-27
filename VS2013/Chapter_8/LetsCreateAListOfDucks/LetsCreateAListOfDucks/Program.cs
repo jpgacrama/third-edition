@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LetsCreateAListOfDucks
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             List<Duck> ducks = new List<Duck>() {
                 new Duck() { Kind = KindOfDuck.Mallard, Size = 17 },
@@ -39,7 +36,6 @@ namespace LetsCreateAListOfDucks
 
             // This keeps the output from disappearing before you can read it
             Console.ReadKey();
-
         }
 
         public static void PrintDucks(List<Duck> ducks)
@@ -50,6 +46,5 @@ namespace LetsCreateAListOfDucks
             }
             Console.WriteLine("End of ducks!");
         }
-
     }
 }
