@@ -1,6 +1,6 @@
 ﻿namespace LetsCreateAListOfDucks
 {
-    internal enum SortCriteria
+    public enum SortCriteria
     {
         SizeThenKind,
         KindThenSize,

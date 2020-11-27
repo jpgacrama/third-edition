@@ -2,7 +2,7 @@
 
 namespace LetsCreateAListOfDucks
 {
-    internal class Duck : IComparable<Duck>
+    public class Duck : IComparable<Duck>
     {
         public int Size;
         public KindOfDuck Kind;

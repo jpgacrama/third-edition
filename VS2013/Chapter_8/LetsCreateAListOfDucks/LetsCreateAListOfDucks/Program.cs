@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LetsCreateAListOfDucks
 {
-    internal class Program
+    public class Program
     {
         private static void Main(string[] args)
         {

@@ -1,6 +1,6 @@
 ﻿namespace LetsCreateAListOfDucks
 {
-    internal enum KindOfDuck
+    public enum KindOfDuck
     {
         Mallard,
         Muscovy,

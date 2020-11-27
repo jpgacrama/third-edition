@@ -2,7 +2,7 @@
 
 namespace LetsCreateAListOfDucks
 {
-    internal class DuckComparer : IComparer<Duck>
+    public class DuckComparer : IComparer<Duck>
     {
         public SortCriteria SortBy = SortCriteria.SizeThenKind;
 

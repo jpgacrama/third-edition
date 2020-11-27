@@ -2,7 +2,7 @@
 
 namespace LetsCreateAListOfDucks
 {
-    internal class DuckComparerByKind : IComparer<Duck>
+    public class DuckComparerByKind : IComparer<Duck>
     {
         public int Compare(Duck x, Duck y)
         {
