@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HideAndSeek
+﻿namespace HideAndSeek
 {
-    class OutsideWithDoor : Outside, IHasExteriorDoor
+    internal class OutsideWithDoor : Outside, IHasExteriorDoor
     {
         public OutsideWithDoor(string name, bool hot, string doorDescription)
             : base(name, hot)

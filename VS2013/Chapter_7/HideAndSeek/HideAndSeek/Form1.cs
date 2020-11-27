@@ -1,36 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HideAndSeek
 {
     public partial class Form1 : Form
     {
-        int Moves;
+        private int Moves;
 
-        Location currentLocation;
+        private Location currentLocation;
 
-        RoomWithDoor livingRoom;
-        RoomWithHidingPlace diningRoom;
-        RoomWithDoor kitchen;
-        Room stairs;
-        RoomWithHidingPlace hallway;
-        RoomWithHidingPlace bathroom;
-        RoomWithHidingPlace masterBedroom;
-        RoomWithHidingPlace secondBedroom;
+        private RoomWithDoor livingRoom;
+        private RoomWithHidingPlace diningRoom;
+        private RoomWithDoor kitchen;
+        private Room stairs;
+        private RoomWithHidingPlace hallway;
+        private RoomWithHidingPlace bathroom;
+        private RoomWithHidingPlace masterBedroom;
+        private RoomWithHidingPlace secondBedroom;
 
-        OutsideWithDoor frontYard;
-        OutsideWithDoor backYard;
-        OutsideWithHidingPlace garden;
-        OutsideWithHidingPlace driveway;
+        private OutsideWithDoor frontYard;
+        private OutsideWithDoor backYard;
+        private OutsideWithHidingPlace garden;
+        private OutsideWithHidingPlace driveway;
 
-        Opponent opponent;
+        private Opponent opponent;
 
         public Form1()
         {
@@ -168,7 +161,5 @@ namespace HideAndSeek
             IHasExteriorDoor hasDoor = currentLocation as IHasExteriorDoor;
             MoveToANewLocation(hasDoor.DoorLocation);
         }
-
-
     }
 }

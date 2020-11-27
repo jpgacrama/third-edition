@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HideAndSeek
 {
-    class Opponent
+    internal class Opponent
     {
         private Random random;
         private Location myLocation;
+
         public Opponent(Location startingLocation)
         {
             myLocation = startingLocation;
             random = new Random();
         }
+
         public void Move()
         {
             bool hidden = false;
@@ -33,6 +31,7 @@ namespace HideAndSeek
                     hidden = true;
             }
         }
+
         public bool Check(Location locationToCheck)
         {
             if (locationToCheck != myLocation)
