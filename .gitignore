@@ -289,3 +289,9 @@ __pycache__/
 *.resx
 
 VS2013/Chapter_6/BeehiveManagementSystem/Doxygen/html/
+
+*.bak
+
+VS2013/Chapter_7/LetsBuildAHouse/Doxygen/html/
+
+VS2013/Chapter_7/HideAndSeek/Doxygen/html/

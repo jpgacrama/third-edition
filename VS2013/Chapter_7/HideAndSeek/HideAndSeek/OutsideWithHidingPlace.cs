@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HideAndSeek
+﻿namespace HideAndSeek
 {
-    class OutsideWithHidingPlace : Outside, IHidingPlace
+    internal class OutsideWithHidingPlace : Outside, IHidingPlace
     {
         public OutsideWithHidingPlace(string name, bool hot, string hidingPlaceName)
             : base(name, hot)

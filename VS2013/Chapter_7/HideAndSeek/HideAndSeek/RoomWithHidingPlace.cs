@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HideAndSeek
+﻿namespace HideAndSeek
 {
-    class RoomWithHidingPlace : Room, IHidingPlace
+    internal class RoomWithHidingPlace : Room, IHidingPlace
     {
         public RoomWithHidingPlace(string name, string decoration, string hidingPlaceName)
             : base(name, decoration)
@@ -15,6 +9,7 @@ namespace HideAndSeek
         }
 
         public string HidingPlaceName { get; private set; }
+
         public override string Description
         {
             get
