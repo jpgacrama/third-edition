@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LetsCreateAListOfDucks
 {
-    class Duck : IComparable<Duck>
+    internal class Duck : IComparable<Duck>
     {
         public int Size;
         public KindOfDuck Kind;

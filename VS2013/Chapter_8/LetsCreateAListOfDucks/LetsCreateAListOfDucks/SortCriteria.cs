@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LetsCreateAListOfDucks
+﻿namespace LetsCreateAListOfDucks
 {
-    enum SortCriteria
+    internal enum SortCriteria
     {
         SizeThenKind,
         KindThenSize,
