@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoFish
 {
     using System.Windows.Forms;
 
-    class Game
+    internal class Game
     {
         private List<Player> players;
         private Dictionary<Values, Player> books;
         private Deck stock;
         private TextBox textBoxOnForm;
+
         public Game(string playerName, IEnumerable<string> opponentNames, TextBox textBoxOnForm)
         {
             Random random = new Random();

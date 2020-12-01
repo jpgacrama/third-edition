@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace GoFish
 {
-    class CardComparer_bySuit : IComparer<Card>
+    internal class CardComparer_bySuit : IComparer<Card>
     {
         public int Compare(Card x, Card y)
         {
